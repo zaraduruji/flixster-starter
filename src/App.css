@@ -41,9 +41,88 @@ button:hover {
   background-color: #9c4bb5; /* Lighter purple */
 }
 
+/* src/App.css */
+
+.toggle-button {
+  background-color: #4b2e83; /* Purple background */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 20px; /* Adjust as needed */
+}
+
+.toggle-button:hover {
+  background-color: #7856b7; /* Darker purple on hover */
+}
+@media (max-width: 1024px) {
+  main {
+    padding: 15px;
+    margin: 15px;
+  }
+
+  .toggle-button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header-right {
+    margin-top: 10px;
+  }
+
+  main {
+    padding: 10px;
+    margin: 10px;
+  }
+
+  .toggle-button {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+
+  button {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+
+  .movie-card {
+    width: 90%;
+    margin: 10px auto;
+  }
+}
+
 @media (max-width: 600px) {
   .movie-card {
     width: 100%;
+    margin: 5px auto;
   }
 
+  main {
+    padding: 5px;
+    margin: 5px;
+  }
+
+  .toggle-button {
+    font-size: 10px;
+    padding: 5px 10px;
+  }
+
+  button {
+    font-size: 10px;
+    padding: 5px 10px;
+  }
 }

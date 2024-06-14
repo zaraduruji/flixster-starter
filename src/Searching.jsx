@@ -5,7 +5,7 @@ import MovieList from '/src/MovieList'
 import SearchBar from './SearchBar'
 
 
-const Searching = () => {
+const Searching = ({favorites, setFavorites, watched, setWatched}) => {
   const[movies, setMovies] =useState([]);
   const [pageNumber, setPageNumber]=useState(1);
   const [searchQuery, setSearchQuery] = useState('');
@@ -42,7 +42,12 @@ const Searching = () => {
     <div className="now-playing">
         <SearchBar setSearchQuery={setSearchQuery} />
     <main>
-      <MovieList data={movies}/>
+      <MovieList data={movies}
+                favorites={favorites}
+                setFavorites={setFavorites}
+                watched={watched}
+                setWatched={setWatched}
+      />
 
       {/* <button onClick={loadNewPages}>Load More</button> */}
     </main>
